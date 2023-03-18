@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript"></script>
+    <title>The Dancers 選秀網站</title>
+    <style>
+      /* 設定整個網站的背景顏色為深藍色 */
+      body {
+        background-color: #1c2331;
+        color: #fff;
+      }
+      /* 上方欄固定不動 */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #1c2331;
+        color: #fff;
+        padding: 0.7%;
+        height:4%;
+        /* text-align: center; 設定文字置中 */
+        justify-content: space-between; /* 左右對齊 */
+        align-items: center; /* 垂直置中 */
+      }
+      /* 下方圖片 */
+      .cover-image {
+        max-width: 100%;
+        height: auto;
+      }
+      /* 功能按鈕 */
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ccc;
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+      .Dancers{
+        color:#fff;
+        text-decoration:none;
+        display: inline-block;
+        margin:0.5%;
+      }
+      /* 登入註冊設定 */
+      .loginandregister {
+        color:#fff;
+        float: right;
+        margin:0.5%;
+        display: inline-block;
+        /* text-align: right; */
+      }
+      .nav.nav-tabs.nav-fill{
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1%;
+        
+      }
+      /* 觸發歷屆選手和投票按鈕前的設定 */
+      .nav-link{
+        color: #FFFF ;
+      }
+      /* 歷屆選手和投票按鈕滑鼠懸停時的設定 */
+      .nav-tabs .nav-link[data-toggle="tab"]:hover {
+        background-color: #1c2331;
+        color:white;
+        font-weight:bold;
+        transition: .1s;
+      }
+      #Vote{
+        color:#fff;
+        text-align: center;
+      }
+      #Past_players{
+        color:#fff;
+        text-align: center;
+      }
+      /* 歷屆選手圖片位址設定 */
+      .circle-images {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5%;
+      }
+      /* 歷屆選手設定一排有三個 */
+      .circle-images a {
+        flex: 1 0 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /* 歷屆選手圖片其他設定 */
+      .circle-images img {
+        border-radius: 50%;
+        width: 55%;
+        height: auto;
+        margin: 15%;
+      }
+      /* 歷屆選手字的設定 */
+      .caption {
+        padding: 3%;
+        text-align: center;
+      }
+      /* 投票的頭像設定 */
+      .vote_img{
+        border-radius: 50%;
+        width: 45%;
+        height: auto;
+      }
+      /* 投票間距設定 */
+     .container{
+      padding: 4%;
+     }
+    </style>
+  </head>
+  <body>
+    <!-- 上方欄 -->
+    <div class="navbar"> 
+      <div class = "Dancers">The Dancers</div>
+      <a href="login.php" class="loginandregister">登入</a>
+      <a href="register.php" class="loginandregister">註冊</a>
+    </div>
+    <!-- 下方圖片 -->
+    <img src="banner.png" alt="The Dancers" class="cover-image" style="margin-top:4%;">
+    <!-- 功能按鈕 -->
+    <ul class="nav nav-tabs nav-fill">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab"  href="#Past_players">歷屆選手</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab"  href="#Vote" >投票</a>
+      </li>
+    </ul>
+    <!--點擊功能後會出現的畫面-->
+    <div class="tab-content">
+      <!-- 投票部分 -->
+      <div id="Vote" class="tab-pane fade in active">
+        <h4  style="margin-top: 5%;">支持你喜歡的選手</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <img src="images/dancer1.jpg" class="img-circle" width="100">
+            </div>
+            <div class="col-sm-4">
+              <p>這裡是敘述文字</p>
+            </div>
+            <div class="col-sm-4">
+              <button class="btn btn-danger">投票</button>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <img src="images/dancer1.jpg" class="img-circle" width="100">
+            </div>
+            <div class="col-sm-4">
+              <p>這裡是敘述文字</p>
+            </div>
+            <div class="col-sm-4">
+              <button class="btn btn-danger">投票</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 歷屆選手部分 -->
+      <div id="Past_players" class="tab-pane fade">
+        <div class="circle-images">
+          <a href="#"><img src="images/dancer1.jpg" alt="Image 1"></a>
+          <!-- <div class="caption">介紹文字2</div> -->
+          <a href="#"><img src="images/dancer1.jpg" alt="Image 2"></a>
+          
+          <a href="#"><img src="images/dancer1.jpg" alt="Image 3"></a>
+          
+          <a href="#"><img src="images/dancer1.jpg" alt="Image 4"></a>
+          
+          <a href="#"><img src="images/dancer1.jpg" alt="Image 5"></a>
+     
+          <a href="#"><img src="images/dancer1.jpg" alt="Image 6"></a>
+        </div>
+      </div>
+  </body>
+</html>
