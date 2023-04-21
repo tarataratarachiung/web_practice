@@ -1,5 +1,3 @@
-<?php
-?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,24 +8,20 @@
     <script type="text/javascript"></script>
     <title>The Dancers 選秀網站</title>
     <style>
-      /* 設定整個網站的背景顏色為深藍色 */
-      body {
-        background-color: #1c2331;
-        color: #fff;
-      }
       /* 上方欄固定不動 */
       .navbar {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        background-color: #1c2331;
+        background-color: #000;
         color: #fff;
         padding: 0.7%;
-        height:4%;
+        height:3%;
+        z-index: 999;
         /* text-align: center; 設定文字置中 */
-        justify-content: space-between; /* 左右對齊 */
-        align-items: center; /* 垂直置中 */
+        /* s */
+        
       }
       .Dancers{
         color:#fff;
@@ -35,7 +29,8 @@
         display: inline-block;
         margin:0.5%;
       }
-      .loginandregister {
+          /* 登入註冊設定 */
+          .loginandregister {
         color:#fff;
         float: right;
         margin:0.5%;
